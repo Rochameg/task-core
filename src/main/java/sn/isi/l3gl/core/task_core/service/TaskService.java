@@ -34,4 +34,9 @@ public class TaskService {
         return taskRepository.save(task);
     }
 
+    // Version 0.3.0-SNAPSHOT
+    public long countCompletedTasks() {
+        return taskRepository.findByStatus(TaskStatus.DONE).size();
+    }
+
 }
